@@ -1,11 +1,12 @@
+#include "ui/main.h"
 #include <gtk/gtk.h>
 #include <stdbool.h>
 #include <stdio.h>
-#include "ui/main.h"
 
 int main(int argc, char *argv[]) {
-    GtkApplication *app = gtk_application_new("app.melody.live-shaders", G_APPLICATION_FLAGS_NONE);
-    MainUi* main_ui = (MainUi*)malloc(sizeof(MainUi));
+    GtkApplication *app = gtk_application_new("app.melody.live-shaders",
+                                              G_APPLICATION_FLAGS_NONE);
+    MainUi *main_ui = (MainUi *)malloc(sizeof(MainUi));
 
     g_signal_connect(app, "activate", G_CALLBACK(ui_main_draw), main_ui);
 

@@ -1,5 +1,5 @@
-#include <gtk/gtk.h>
 #include "../ui/main.h"
+#include <gtk/gtk.h>
 #pragma once
 
-extern void ui_main_register_events(MainUi*);
+extern void ui_main_register_events(MainUi *);
